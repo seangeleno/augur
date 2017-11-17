@@ -38,6 +38,7 @@ const syncUniverse = (callback = logError) => (dispatch, getState) => {
     dispatch(updateAssets((err, balances) => {
       if (err) return callback(err)
       dispatch(claimTradingProceeds())
+      console.log('completed sync universe')
       callback(null)
     }))
   })

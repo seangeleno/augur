@@ -28,6 +28,7 @@ export const loadUniverse = (universeID, callback = logError) => (dispatch, getS
       })
     }
   }, (err, staticUniverseData) => {
+    console.log('universe', err, staticUniverseData)
     if (err) return callback(err)
     dispatch(updateUniverse({ ...staticUniverseData, id: universeID }))
     dispatch(updateUniverse(getReportingCycle()))
