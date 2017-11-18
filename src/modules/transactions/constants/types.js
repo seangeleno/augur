@@ -11,6 +11,7 @@ export const SELL_COMPLETE_SETS = 'SellCompleteSets'
 export const SUBMIT_REPORT = 'SubmitReport'
 export const FILL_ORDER = 'FillOrder'
 export const TRANSFER = 'Transfer'
+export const TOKENS_TRANSFERED = 'TokensTransferred'
 export const WITHDRAW_ETHER = 'WithdrawEther'
 
 // Other
