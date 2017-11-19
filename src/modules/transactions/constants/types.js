@@ -11,8 +11,22 @@ export const SELL_COMPLETE_SETS = 'SellCompleteSets'
 export const SUBMIT_REPORT = 'SubmitReport'
 export const FILL_ORDER = 'FillOrder'
 export const TRANSFER = 'Transfer'
-export const TOKENS_TRANSFERED = 'TokensTransferred'
 export const WITHDRAW_ETHER = 'WithdrawEther'
+
+// V3 Events TODO: remove above constants from repo except Transfer and Approval
+export const MARKET_CREATED = 'MarketCreated'
+export const MARKET_FINALIZED = 'MarketFinalized'
+export const TOKENS_TRANSFERED = 'TokensTransferred'
+export const ORDER_CREATED = 'OrderCreated'
+export const ORDER_FILLED = 'OrderFilled'
+export const ORDER_CANCELED = 'OrderCanceled'
+export const TRADING_PROCEEDS_CLAIMED = 'TradingProceedsClaimed'
+export const DESIGNATED_REPORT_SUBMITTED = 'DesignatedReportSubmitted'
+export const REPORT_SUBMITTED = 'ReportSubmitted'
+export const WINNING_TOKENS_REDEEMED = 'WinningTokensRedeemed'
+export const REPORTS_DISPUTED = 'ReportsDisputed'
+export const UNIVERSE_FORKED = 'UniverseForked'
+
 
 // Other
 export const TRANSFER_FUNDS = 'transfer_funds'

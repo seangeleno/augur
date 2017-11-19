@@ -4,6 +4,7 @@ import proxyquire from 'proxyquire'
 import sinon from 'sinon'
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
+import { ORDER_CREATED, ORDER_CANCELED, ORDER_FILLED } from 'modules/transactions/constants/types'
 
 import {
   UPDATE_ACCOUNT_TRADES_DATA,
@@ -90,7 +91,7 @@ describe('modules/my-positions/actions/update-account-trades-data.js', () => {
         const expected = [
           {
             type: MOCK_ACTION_TYPES.CONVERT_TRADE_LOGS_TO_TRANSACTIONS,
-            logType: 'CreateOrder',
+            logType: ORDER_CREATED,
             data: {
               market: [
                 {
@@ -153,7 +154,7 @@ describe('modules/my-positions/actions/update-account-trades-data.js', () => {
         const expected = [
           {
             type: MOCK_ACTION_TYPES.CONVERT_TRADE_LOGS_TO_TRANSACTIONS,
-            logType: 'CreateOrder',
+            logType: ORDER_CREATED,
             data: {
               '0xMARKETID': {}
             },
@@ -193,7 +194,7 @@ describe('modules/my-positions/actions/update-account-trades-data.js', () => {
         const expected = [
           {
             type: MOCK_ACTION_TYPES.CONVERT_TRADE_LOGS_TO_TRANSACTIONS,
-            logType: 'CancelOrder',
+            logType: ORDER_CANCELED,
             data: {
               '0xMARKETID': {}
             },
@@ -236,7 +237,7 @@ describe('modules/my-positions/actions/update-account-trades-data.js', () => {
         const expected = [
           {
             type: MOCK_ACTION_TYPES.CONVERT_TRADE_LOGS_TO_TRANSACTIONS,
-            logType: 'FillOrder',
+            logType: ORDER_FILLED,
             data: {
               '0xMARKETID': {}
             },
@@ -284,7 +285,7 @@ describe('modules/my-positions/actions/update-account-trades-data.js', () => {
         const expected = [
           {
             type: MOCK_ACTION_TYPES.CONVERT_TRADE_LOGS_TO_TRANSACTIONS,
-            logType: 'FillOrder',
+            logType: ORDER_FILLED,
             data: {
               '0xMARKETID': {
                 type: 'something'
